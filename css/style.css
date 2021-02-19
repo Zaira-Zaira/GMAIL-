@@ -67,16 +67,15 @@ header nav ul li:nth-child(3){
     text-align: center;
     max-width: 40rem;
 }
-#connexion p:first-child{
+#connexion h6{
     font-size: 3rem;
     font-weight: 100;
     margin-top: 40%;
     font-weight: 100;
 }
-#connexion p:nth-child(2){
+#connexion p{
     margin-top: 4%;
 }
-
 footer{
     display: flex;
     justify-content: flex-end;
