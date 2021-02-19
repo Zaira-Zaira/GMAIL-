@@ -1,0 +1,87 @@
+/* THEME */
+header{
+    justify-content: center;
+    width: auto;
+}
+header nav ul{
+    display: flex;
+    width: 100%;
+    height: 6vh;
+    position: fixed;
+    background-color: #fafafa;
+    align-self: center;
+    align-items: center;
+}
+header nav ul li{
+    display: inline-flex;
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+header nav ul li:nth-child(2){
+    margin-left: -2.5rem;
+}
+header nav ul li:nth-child(3){
+    margin-left: 62%;
+}
+#signIn{
+    width: auto;
+    height: 100vh;
+    background: url(../image/home-hero.jpg) no-repeat fixed
+    center center / cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: -1;
+}
+#signIn  h1{
+    max-width: 55rem;
+    color: #fafafa;
+    font-weight: 5;
+    font-size: 4.5rem;
+    margin-left: 10rem;
+    padding-bottom: 8rem;
+    letter-spacing: 0.1rem;
+    z-index: 2;
+}
+#signIn > a{
+    max-width: 19rem;
+    margin-left: 10rem;
+    margin-top: -4rem;
+    padding: 1.5rem 1rem;
+    background-color: #dd5347;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fafafa;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+#connexion{
+    margin: 0 auto;
+    height: 100vh;
+    width: auto;
+    text-align: center;
+    max-width: 40rem;
+}
+#connexion p:first-child{
+    font-size: 3rem;
+    font-weight: 100;
+    margin-top: 40%;
+    font-weight: 100;
+}
+#connexion p:nth-child(2){
+    margin-top: 4%;
+}
+
+footer{
+    display: flex;
+    justify-content: flex-end;
+}
+footer > img{
+    background-color: #dd5347;
+
+}

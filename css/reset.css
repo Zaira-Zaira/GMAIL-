@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Josefin+Sans:wght@100&family=Rambla&display=swap');
+   /*   RESET   */
+   
+   html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    }
+    *{
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+     }
+                   
+    body{
+        font:1.6rem 'Open Sans', sans-serif;
+        margin:0;
+        padding:0;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
+                                        
+    h1,ul,li, h2, h3, span, p, img{
+        margin: 0;
+        padding: 0;
+    }
+    a{
+        color: #222;
+        text-decoration: none;
+    }
+    
