@@ -1,29 +1,56 @@
 /* THEME */
 header{
-    justify-content: center;
     width: auto;
 }
-header nav ul{
+header nav{
     display: flex;
-    width: 100%;
     height: 6vh;
+    box-shadow: 0 0.1rem 0 #333;
     position: fixed;
+    width: 100%;
+    z-index: 3;
     background-color: #fafafa;
+}
+header nav ul {
+    display: flex;
     align-self: center;
     align-items: center;
 }
 header nav ul li{
-    display: inline-flex;
-    padding-left: 2rem;
-    padding-right: 1.5rem;
     text-transform: uppercase;
     font-size: 1.3rem;
 }
-header nav ul li:nth-child(2){
-    margin-left: -2.5rem;
+header nav ul:first-child{
+    width: 10%;
 }
-header nav ul li:nth-child(3){
-    margin-left: 62%;
+header nav ul:first-child li{
+    padding: 0 0.5rem;
+}
+header nav ul:nth-child(2){
+    display: inline-flex;
+    width: 90%;
+    justify-content: flex-end;
+} 
+header nav ul li a{
+    width: 100%;
+    height: 100%;
+    line-height: 2;
+    padding:1.5rem 1.5rem;
+}
+header nav ul li a:hover{
+    background-color: #a92819;
+    color: #fafafa;
+}
+
+header nav ul:nth-child(2) li a:hover,
+.darkTheme{
+    background-color: #a92819;
+    color: #fafafa;
+}
+header nav ul:nth-child(2) li a:hover,
+.lightTheme{
+    background-color: #fafafa;
+    color: #222;
 }
 #signIn{
     width: auto;
@@ -46,26 +73,40 @@ header nav ul li:nth-child(3){
     letter-spacing: 0.1rem;
     z-index: 2;
 }
-#signIn > a{
+#signIn > .btnConnexion{
+    display: block;
     max-width: 19rem;
     margin-left: 10rem;
     margin-top: -4rem;
     padding: 1.5rem 1rem;
-    background-color: #dd5347;
+    background-color: #a92819;
     text-transform: uppercase;
     text-align: center;
     color: #fafafa;
     border: none;
     cursor: pointer;
     font-size: 1.4rem;
+    z-index: 2;
 }
-
+.arrowbtn{
+    background-color: #a92819;
+    padding: 1rem;
+    border-radius: 50%;
+    float: inline-end;
+    margin-right: 3rem;
+}
+#signIn > img{
+    background-color:#a92819;
+    max-width: 7rem;
+    border-radius: 50%;
+}
 #connexion{
     margin: 0 auto;
-    height: 100vh;
+    height: 70vh;
     width: auto;
     text-align: center;
     max-width: 40rem;
+    padding-top: 6.0rem;
 }
 #connexion h6{
     font-size: 3rem;
@@ -74,13 +115,15 @@ header nav ul li:nth-child(3){
     font-weight: 100;
 }
 #connexion p{
-    margin-top: 4%;
+    margin-top: 1.5%;
+    line-height: 2.2rem;
 }
-footer{
-    display: flex;
-    justify-content: flex-end;
-}
-footer > img{
-    background-color: #dd5347;
-
+footer > a{
+    background-color: #a92819;
+    float: right;
+    margin: 10%;
+    padding: 1rem;
+    border-radius: 50%;
+    box-shadow: 0 1rem 1rem #222;
+    cursor: pointer;
 }
