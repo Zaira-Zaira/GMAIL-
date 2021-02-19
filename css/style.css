@@ -1,15 +1,27 @@
 /* THEME */
+
+:root{
+    --primary_color: #a92819;
+    --secondary-color:#fafafa;
+    --box-shadow-color: #333;
+    --dark-theme:#222;
+}
+
 header{
     width: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--secondary-color);
 }
 header nav{
     display: flex;
     height: 6vh;
-    box-shadow: 0 0.1rem 0 #333;
+    box-shadow: 0 0.1rem 0 var(--box-shadow-color);
     position: fixed;
     width: 100%;
     z-index: 3;
-    background-color: #fafafa;
+    background-color: var(--secondary-color);
 }
 header nav ul {
     display: flex;
@@ -38,19 +50,19 @@ header nav ul li a{
     padding:1.5rem 1.5rem;
 }
 header nav ul li a:hover{
-    background-color: #a92819;
-    color: #fafafa;
+    background-color: var(--primary_color);
+    color: var(--secondary-color);
 }
 
 header nav ul:nth-child(2) li a:hover,
 .darkTheme{
-    background-color: #a92819;
-    color: #fafafa;
+    background-color: var(--primary_color);
+    color: var(--secondary-color);
 }
 header nav ul:nth-child(2) li a:hover,
 .lightTheme{
-    background-color: #fafafa;
-    color: #222;
+    background-color: var(--secondary-color);
+    color: var(--dark-theme);
 }
 #signIn{
     width: auto;
@@ -65,7 +77,7 @@ header nav ul:nth-child(2) li a:hover,
 }
 #signIn  h1{
     max-width: 55rem;
-    color: #fafafa;
+    color: var(--secondary-color);
     font-weight: 5;
     font-size: 4.5rem;
     margin-left: 10rem;
@@ -79,7 +91,7 @@ header nav ul:nth-child(2) li a:hover,
     margin-left: 10rem;
     margin-top: -4rem;
     padding: 1.5rem 1rem;
-    background-color: #a92819;
+    background-color: var(--primary_color);
     text-transform: uppercase;
     text-align: center;
     color: #fafafa;
