@@ -144,6 +144,7 @@ header nav ul:first-child li a:hover,
     height: 100%;
     margin: 0 auto;
     width: 100%;
+    padding-top: 2rem;
 }
 fieldset{
     border: solid rgb(221, 218, 218);
@@ -151,7 +152,7 @@ fieldset{
     border-radius: 1rem;
 }
 legend{
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     font-weight: 100;
     letter-spacing: 0.05rem;
     padding: 0 1rem;
