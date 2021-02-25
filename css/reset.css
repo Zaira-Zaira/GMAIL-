@@ -17,6 +17,7 @@
         padding:0;
         scroll-behavior: smooth;
         overflow-x: hidden;
+        outline: solid 0.1rem transparent;
     }
                                         
     h1,ul,li, h2, h3, span, p, img{

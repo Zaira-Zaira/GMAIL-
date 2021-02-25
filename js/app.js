@@ -1,92 +1,45 @@
 document.addEventListener('DOMContentLoaded', (e)=>{
-
+  e.preventDefault()
+   console.log("loaded")
     const linkList = document.querySelectorAll("header nav ul:nth-child(2) li a");
-  
+    const submitBtn = document.getElementsByTagName("input")[4]
 
-    for (let i = 0; i < linkList.length; i++) {
-      linkList[i].addEventListener("click", (e) => {
-        for (let i = 0; i < linkList.length; i++) {
-       //  let pressed =  (e.target.getAttribute("aria-current") === "true")
-         if(e.target.getAttribute("aria-current") === "true"){
-          linkList[i].classList.add("redTheme");
-          // linkList[i].classList.add("whiteTheme");
-          e.target.setAttribute("aria-current", "false")
-         }
-        }
-        linkList[i].classList.remove("redTheme");
-        linkList[i].classList.add("whiteTheme");
-      });
-    }
+    //create virtual element warning 
 
+    let parent = document.querySelector("#form");
+    let element = document.createElement('p')
+    parent.prepend(element)
 
+    const User = ({
+      firstname: document.getElementsByTagName("input")[0],
+      lastname: document.getElementsByTagName("input")[1],
+      email: document.getElementsByTagName("input")[2],
+      password: document.getElementsByTagName("input")[3],
 
-
-
-
-
-
-
-
-
-
+          userDataControll(){
+            if(!this.firstname.value || !this.lastname.value || !this.email.value || !this.password.value){
+              element.innerText="Tous les champs sont obligatoires!!!"
+              element.classList.add("warning")
+            }
+            else{
+              document.location.assign("connexion.html")
+              localStorage.setItem('User', this.firstname.value)
+              sessionStorage.setItem('key', 'user')
+            }
+          }
+    })
 
 
-
-
-
-
+    submitBtn.addEventListener("click", (e)=> {
+        e.preventDefault()
+         User.userDataControll()
+    })
 
 
 
 
-    // for (let i = 0; i < linkList.length; i++) {
-    //   linkList[i].addEventListener("click", (e) => {
-    //    for (let i = 0; i < linkList.length; i++) {
-
-    //         // Check to see if the button is pressed
-    //   var pressed = (e.target.getAttribute("aria-current") === "true");
-    //   // Change aria-pressed to the opposite state
-    //   e.target.setAttribute("aria-current", !pressed);
-    //   // toggle the play state of the audio file
-              
-    //   if(pressed){
-    //     linkList[i].classList.remove("redTheme");
-    //     linkList[i].classList.add("whiteTheme");
-    //   }
-    //   else{
-    //     linkList[i].classList.add("redTheme");
-    //     linkList[i].classList.remove("whiteTheme");
-    //   }
-    //     }
-    
-    //     linkList[i].classList.remove("redTheme");
-    //     linkList[i].classList.add("whiteTheme");
-  
-    //   });
-    // }
-
-    
-
-    // e.target.addEventListener("click", (e)=>{
-    //   console.log(e.target);
-    //   console.log(e.target.getAttribute("aria-current"));
-
-    //   if(e.target.getAttribute("aria-current" == "true")){
-    //     e.target.setAttribute("aria-current", "false")
-    //   }
-    //   else{
-    //     e.target.setAttribute("aria-current", "true")
-    //   }
-    // })
 
 
-    function toggleButton(element) {
-      // Check to see if the button is pressed
-      var pressed = (element.target.getAttribute("aria-current") === "true");
-      // Change aria-pressed to the opposite state
-      element.target.setAttribute("aria-current", !pressed);
-      // toggle the play state of the audio file
-     
-    }
+
         
   })

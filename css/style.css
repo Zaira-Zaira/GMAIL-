@@ -16,7 +16,7 @@ header{
 header > nav{
     display: flex;
     height: 6vh;
-    box-shadow: 0 0.1rem 0 var(--box-shadow-color);
+    box-shadow: 0 0 0.5rem 0 var(--box-shadow-color);
     position: fixed;
     width: 100%;
     z-index: 3;
@@ -48,19 +48,9 @@ header nav ul li a{
     line-height: 2;
     padding:1.5rem 1.5rem;
 }
-header nav ul li a:hover{
+header nav ul li a[role="button"]{
     background-color: var(--primary_color);
     color: var(--secondary-color);
-}
-header nav ul:nth-child(2) li a:hover,
-.redTheme{
-    background-color: var(--primary_color);
-    color: var(--secondary-color);
-}
-header nav ul:first-child li a:hover,
-.whiteTheme{
-    background-color: var(--secondary-color);
-    color: var(--dark-theme);
 }
 #signIn{
     width: auto;
@@ -187,6 +177,27 @@ input:last-child{
     color: #FFFF;
     text-transform: uppercase;
     cursor: pointer;
+}
+#connexionForm{
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-top: 6rem;
+}
+.welcome{
+   text-align: center;
+   padding-bottom: 3rem;
+   font-size: 3rem;
+   font-weight: 100;
+}
+.warning{
+    background-color:#a92819;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 1.0rem 1.0rem;
+    color: #FFF;
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
 }
 footer{
     height: 30vh;
