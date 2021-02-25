@@ -6,7 +6,6 @@
     --box-shadow-color: #333;
     --dark-theme:#222;
 }
-
 header{
     width: auto;
     position: fixed;
@@ -14,7 +13,7 @@ header{
     left: 0;
     background-color: var(--secondary-color);
 }
-header nav{
+header > nav{
     display: flex;
     height: 6vh;
     box-shadow: 0 0.1rem 0 var(--box-shadow-color);
@@ -53,14 +52,21 @@ header nav ul li a:hover{
     background-color: var(--primary_color);
     color: var(--secondary-color);
 }
-
-header nav ul:nth-child(2) li a:hover,
-.darkTheme{
+/* ul li a[aria-current="true"]{
     background-color: var(--primary_color);
     color: var(--secondary-color);
 }
+ul li a[aria-current="false"]{
+    background-color: var(--secondary-color);
+    color: var(--dark-theme);
+} */
 header nav ul:nth-child(2) li a:hover,
-.lightTheme{
+.redTheme{
+    background-color: var(--primary_color);
+    color: var(--secondary-color);
+}
+header nav ul:first-child li a:hover,
+.whiteTheme{
     background-color: var(--secondary-color);
     color: var(--dark-theme);
 }
@@ -130,12 +136,19 @@ header nav ul:nth-child(2) li a:hover,
     margin-top: 1.5%;
     line-height: 2.2rem;
 }
-footer > a{
+.arrowBtn{
     background-color: #a92819;
-    float: right;
-    margin: 10%;
-    padding: 1rem;
     border-radius: 50%;
     box-shadow: 0 1rem 1rem #222;
     cursor: pointer;
+    position: fixed;
+    bottom: 10%;
+    display: grid;
+    text-align: center;
+    right: 5%;
+    align-items: center;
+    padding: 1rem;
+}
+footer{
+    height: 30vh;
 }
