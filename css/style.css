@@ -3,7 +3,7 @@
 :root{
     --primary_color: #a92819;
     --secondary-color:#fafafa;
-    --box-shadow-color: #333;
+    --box-shadow-color: rgb(221, 218, 218);
     --dark-theme:#222;
 }
 header{
@@ -52,14 +52,6 @@ header nav ul li a:hover{
     background-color: var(--primary_color);
     color: var(--secondary-color);
 }
-/* ul li a[aria-current="true"]{
-    background-color: var(--primary_color);
-    color: var(--secondary-color);
-}
-ul li a[aria-current="false"]{
-    background-color: var(--secondary-color);
-    color: var(--dark-theme);
-} */
 header nav ul:nth-child(2) li a:hover,
 .redTheme{
     background-color: var(--primary_color);
@@ -120,16 +112,14 @@ header nav ul:first-child li a:hover,
 }
 #connexion{
     margin: 0 auto;
-    height: 70vh;
+    height: 40vh;
     width: auto;
     text-align: center;
     max-width: 40rem;
     padding-top: 6.0rem;
 }
-#connexion h6{
+#connexion > h2{
     font-size: 3rem;
-    font-weight: 100;
-    margin-top: 40%;
     font-weight: 100;
 }
 #connexion p{
@@ -148,6 +138,53 @@ header nav ul:first-child li a:hover,
     right: 5%;
     align-items: center;
     padding: 1rem;
+}
+#form{
+    max-width: 80rem;
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+}
+fieldset{
+    border: solid rgb(221, 218, 218);
+    border-width: 0.15rem;
+    border-radius: 1rem;
+}
+legend{
+    font-size: 2.5rem;
+    font-weight: 100;
+    letter-spacing: 0.05rem;
+    padding: 0 1rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+label{
+    padding: 0.8rem 0;
+}
+input{
+    padding: 1.5rem 0.7rem;
+    border: solid transparent;
+    border-bottom-color: rgb(221, 218, 218);
+    border-bottom-width: 0.15rem;
+    background-color: #f8f6f6;
+    font-size: 1.5rem;
+    color: #333;
+    outline: none;
+}
+input:focus{
+    box-shadow: 0 0 0.7rem 0 #a92819;
+}
+input:last-child{
+    margin: 1.0rem auto;
+    padding: 1.5rem 6rem;
+    outline: none;
+    background-color: #1a73e8;
+    border: none;
+    color: #FFFF;
+    text-transform: uppercase;
 }
 footer{
     height: 30vh;
