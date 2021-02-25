@@ -112,7 +112,7 @@ header nav ul:first-child li a:hover,
 }
 #connexion{
     margin: 0 auto;
-    height: 40vh;
+    height: 33vh;
     width: auto;
     text-align: center;
     max-width: 40rem;
@@ -162,7 +162,7 @@ form{
     margin-top: 2rem;
 }
 label{
-    padding: 0.8rem 0;
+    padding: 1rem 0;
 }
 input{
     padding: 1.5rem 0.7rem;
@@ -185,6 +185,7 @@ input:last-child{
     border: none;
     color: #FFFF;
     text-transform: uppercase;
+    cursor: pointer;
 }
 footer{
     height: 30vh;
