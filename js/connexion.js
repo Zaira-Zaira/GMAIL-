@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     SignInBtn.addEventListener("click", ()=>{
         document.location.assign("index.html")
-        console.log("clicked")
+        localStorage.clear()
     })
 
 })
