@@ -5,6 +5,10 @@
     --secondary-color:#fafafa;
     --box-shadow-color: rgb(221, 218, 218);
     --dark-theme:#222;
+    --bg-color-light: #f8f6f6;
+    --input-grey-theme: #333;
+    --text-color: #FFFF;
+    --btn-color: #1a73e8;
 }
 header{
     width: auto;
@@ -42,6 +46,16 @@ header nav ul:nth-child(2){
     width: 90%;
     justify-content: flex-end;
 } 
+/* header nav ul:nth-child(2) li a:hover, 
+.redTheme{
+     background-color: var(--primary_color);
+     color: var(--secondary-color);
+}
+header nav ul li a:hover, 
+.lightTheme{
+     background-color: var(--secondary-color);
+     color: var(--dark-theme);
+} */
 header nav ul li a{
     width: 100%;
     height: 100%;
@@ -89,14 +103,14 @@ header nav ul li a[role="button"]{
     z-index: 2;
 }
 .arrowbtn{
-    background-color: #a92819;
+    background-color: var(--primary_color);
     padding: 1rem;
     border-radius: 50%;
     float: inline-end;
     margin-right: 3rem;
 }
 #signIn > img{
-    background-color:#a92819;
+    background-color: var(--primary_color);
     max-width: 7rem;
     border-radius: 50%;
 }
@@ -117,9 +131,9 @@ header nav ul li a[role="button"]{
     line-height: 2.2rem;
 }
 .arrowBtn{
-    background-color: #a92819;
+    background-color: var(--primary_color);
     border-radius: 50%;
-    box-shadow: 0 1rem 1rem #222;
+    box-shadow: 0 1rem 1rem var(--dark-theme);
     cursor: pointer;
     position: fixed;
     bottom: 10%;
@@ -137,7 +151,7 @@ header nav ul li a[role="button"]{
     padding-top: 2rem;
 }
 fieldset{
-    border: solid rgb(221, 218, 218);
+    border: solid  var(--box-shadow-color);
     border-width: 0.15rem;
     border-radius: 1rem;
 }
@@ -158,23 +172,23 @@ label{
 input{
     padding: 1.5rem 0.7rem;
     border: solid transparent;
-    border-bottom-color: rgb(221, 218, 218);
+    border-bottom-color: var(--box-shadow-color);
     border-bottom-width: 0.15rem;
-    background-color: #f8f6f6;
+    background-color: var(--bg-color-light);
     font-size: 1.5rem;
-    color: #333;
+    color: var(--input-grey-theme);
     outline: none;
 }
 input:focus{
-    box-shadow: 0 0 0.7rem 0 #a92819;
+    box-shadow: 0 0 0.7rem 0 var(--primary_color);
 }
 input:last-child{
     margin: 1.0rem auto;
     padding: 1.5rem 6rem;
     outline: none;
-    background-color: #1a73e8;
+    background-color: var(--btn-color);
     border: none;
-    color: #FFFF;
+    color: var(--text-color);
     text-transform: uppercase;
     cursor: pointer;
 }
@@ -190,12 +204,12 @@ input:last-child{
    font-weight: 100;
 }
 .warning{
-    background-color:#a92819;
+    background-color: var(--primary_color);
     align-items: center;
     text-align: center;
     justify-content: center;
     padding: 1.0rem 1.0rem;
-    color: #FFF;
+    color: var(--text-color);
     margin-bottom: 2.5rem;
     font-size: 2rem;
 }
