@@ -47,39 +47,4 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 
 
-//     const checkLoginPassword = ({
-//          login: document.getElementsByTagName('input')[0],
-//          password: document.getElementsByTagName('input')[1],
-
-//          firstname = sessionStorage.getItem('firstname'),
-//          email = sessionStorage.getItem('email'),
-//          passwordUser = sessionStorage.getItem('password'),
-
-//          check(){
-//               if(this.login.value == this.firstname || this.login.value == this.email){
-//                     document.location.assign("userAccount.html")
-//               }
-//               else if(!this.login.value || !this.password.value  ){
-//                 element.innerText += "Veuillez renseigner tous les champs"
-//                 element.classList.add("warning")
-//               }
-//               else if(this.login.value != this.firstname || this.login.value != this.email){
-//                  element.innerText += "Votre login est incorrect"
-//                  element.classList.add("warning")
-//              }
-//              else if(this.password.value != this.passwordUser){
-//                  element.innerText += "Votre mot de passe est incorrect"
-//                  element.classList.add("warning")
-//              }
-//          }
-//     })
-
-
-//      submit.addEventListener('click', (e)=>{
-//         e.preventDefault()
-//         checkLoginPassword.check()
-//      })
-
-
-
 })
