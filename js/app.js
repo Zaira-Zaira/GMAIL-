@@ -40,11 +40,11 @@ document.addEventListener('DOMContentLoaded', (e)=>{
               localStorage.setItem('formdata', this.userdata)
             }
             else if(!this.firstname.value || !this.lastname.value || !this.email.value || !this.password.value){
-              element.innerText="Tous les champs sont obligatoires!!!"
+              element.innerText += "Tous les champs sont obligatoires!!!"
               element.classList.add("warning")
             }
             else if(checkmail.exec(this.email.value && checkPassword.exec(this.password.value))){
-                    
+              element.innerText += "Veuillez saisir les champs correctement!"
             }
           }
     })
