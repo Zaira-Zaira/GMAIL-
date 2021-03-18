@@ -40,7 +40,7 @@
             <fieldset>     
                 <legend>Créer un compte</legend>
 
-            <form action="./src/traitement.inc.php" method="post">
+            <form action="./connection.php" method="post">
                 <label for="nom">Nom *</label>
                 <input type="text" id="nom" name="nom" placeholder="Votre nom" aria-required="true">
      
@@ -59,6 +59,22 @@
 
             </fieldset> 
         </section>
+
+        <?php
+         try{
+             $bdd = new PDO('mysql:host=localhost;dbname=inscription;charset=utf8','root','root');
+            }
+           catch(Exception $e)
+           {
+            die('Erreur : '.$e->getMessage());
+          }
+
+
+          if(isset($_POST['submit'])) {
+            $req = $bdd->prepare('INSERT INTO user(nom, prenom, mail, password)VALUES(?,?,?,?)');
+            $req->execute(array(htmlentities($_POST['nom']), $_POST['prenom'], $_POST['mail'],$_POST['password'] ));
+        }
+?>
 
     </main>
 
