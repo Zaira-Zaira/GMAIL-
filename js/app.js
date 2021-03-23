@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', (e)=>{
-  e.preventDefault()
+document.addEventListener('DOMContentLoaded', ()=>{
     const linkList = document.querySelectorAll("header nav ul:nth-child(2) li a");
     const submitBtn = document.getElementsByTagName("input")[4]
 
@@ -26,32 +25,42 @@ document.addEventListener('DOMContentLoaded', (e)=>{
       lastname: document.getElementsByTagName("input")[1],
       email: document.getElementsByTagName("input")[2],
       password: document.getElementsByTagName("input")[3],
-      userdata: [],
           userDataControll(){
-            if(this.firstname.value && this.lastname.value && this.email.value && this.password.value){
-              // document.location.assign("connexion.html")
+            if(this.firstname.value && this.lastname.value && this.email.value && this.password.value)
+            {
               localStorage.setItem('User', this.firstname.value)
               sessionStorage.setItem('key', 'user')
               sessionStorage.setItem('firstname', this.firstname.value)
               sessionStorage.setItem('email', this.email.value)
               sessionStorage.setItem('password', this.password.value)
-
-              this.userdata.push(this.email.value, this.password)
               localStorage.setItem('formdata', this.userdata)
+              return true;
             }
             else if(!this.firstname.value || !this.lastname.value || !this.email.value || !this.password.value){
               element.innerText += "Tous les champs sont obligatoires!!!"
               element.classList.add("warning")
+              return false;
             }
             else if(checkmail.exec(this.email.value && checkPassword.exec(this.password.value))){
               element.innerText += "Veuillez saisir les champs correctement!"
+              return false;
             }
           }
     })
 
 
     submitBtn.addEventListener("click", (e)=> {
-         User.userDataControll()
+
+      if(User.userDataControll()){
+        document.location.assign("connection.php")
+      }else{
+        e.preventDefault()
+      }
+
+
+
+      // User.userDataControll() ? document.location.assign("connection.php") : e.preventDefault()
+
     })
 
 

@@ -24,7 +24,6 @@
     </header>
 
     <main>
-
         <section id="signIn">
             <h1>Retrouvez la fluidité et la simplicité de Gmail sur tous vos appareil</h1>
             <a class="btnConnexion" href="#connexion">Créer un compte</a>
@@ -39,8 +38,7 @@
         <section id="form">
             <fieldset>     
                 <legend>Créer un compte</legend>
-
-            <form action="./connection.php" method="post">
+            <form action="./src/traitement.inc.php" method="post">
                 <label for="nom">Nom *</label>
                 <input type="text" id="nom" name="nom" placeholder="Votre nom" aria-required="true">
      
@@ -54,27 +52,12 @@
                 <label for="password">Choisir votre mot de passe *</label>
                 <input type="password" id="password" name="password" placeholder="Votre mot de passe" aria-required="true">
               
-               <input type="submit" value="Valider votre compte">
+               <input type="submit" value="Valider votre compte" name="send">
               </form>
 
             </fieldset> 
         </section>
 
-        <?php
-         try{
-             $bdd = new PDO('mysql:host=localhost;dbname=inscription;charset=utf8','root','root');
-            }
-           catch(Exception $e)
-           {
-            die('Erreur : '.$e->getMessage());
-          }
-
-
-          if(isset($_POST['submit'])) {
-            $req = $bdd->prepare('INSERT INTO user(nom, prenom, mail, password)VALUES(?,?,?,?)');
-            $req->execute(array(htmlentities($_POST['nom']), $_POST['prenom'], $_POST['mail'],$_POST['password'] ));
-        }
-?>
 
     </main>
 

@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
    
     submit.addEventListener('click', (e)=>{
-        e.preventDefault()
         if(login.value == email && password.value == passwordUser){
             element.innerText += "Vous êtes bien connecté";
             element.classList.add("success")
@@ -37,10 +36,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
         else if(login != email){
            element.innerText += "Votre login est incorrect";
            element.classList.add("warning")
+           e.preventDefault()
         }
         else if(password != passwordUser){
            element.innerText += "Votre mot de passe est incorrect";
            element.classList.add("warning")
+           e.preventDefault()
         }
 
    })
