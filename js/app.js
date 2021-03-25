@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
           userDataControll(){
             if(this.firstname.value && this.lastname.value && this.email.value && this.password.value)
             {
+              document.location.assign("connexion.html")
               localStorage.setItem('User', this.firstname.value)
               sessionStorage.setItem('key', 'user')
               sessionStorage.setItem('firstname', this.firstname.value)
@@ -51,15 +52,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     submitBtn.addEventListener("click", (e)=> {
 
-      if(User.userDataControll()){
-        document.location.assign("connection.php")
-      }else{
-        e.preventDefault()
-      }
+        User.userDataControll();
+        document.location.assign("connexion.html")
 
-
-
-      // User.userDataControll() ? document.location.assign("connection.php") : e.preventDefault()
 
     })
 

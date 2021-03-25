@@ -18,12 +18,11 @@
             <ul>
                 <li><a href="#" aria-current="false">Pour les pros</a></li>
                 <li><a href="#" aria-current="false" role="button">Connexion</a> </li>
-                <li><a href="<?php $_SERVER['REQUEST_URI'] != '/connection.php' ?  print "/connection.php" : print "/inscription.php"; ?>" aria-current="true" class="signIn">Créer un compte</a></li>
+                <li><a href="./inscription.php" aria-current="true" class="signIn">Créer un compte</a></li>
             </ul>
         </nav>
     </header>
     
-
     <main>
 
         <section id="connexionForm">
