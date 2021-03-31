@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
           userDataControll(){
             if(this.firstname.value && this.lastname.value && this.email.value && this.password.value)
             {
-              document.location.assign("connexion.html")
+              //document.location.assign("index.html")
               localStorage.setItem('User', this.firstname.value)
               sessionStorage.setItem('key', 'user')
               sessionStorage.setItem('firstname', this.firstname.value)
@@ -53,7 +53,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
     submitBtn.addEventListener("click", (e)=> {
 
         User.userDataControll();
-        document.location.assign("connexion.html")
+
+        document.location.assign("index.html")
 
 
     })
