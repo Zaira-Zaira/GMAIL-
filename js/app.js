@@ -51,9 +51,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 
     submitBtn.addEventListener("click", (e)=> {
-        e.preventDefault();
-        User.userDataControll();
-
+      User.userDataControll()
+  
+  
     })
 
 
