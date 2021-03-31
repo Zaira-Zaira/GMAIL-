@@ -38,7 +38,7 @@
                 <label for="password">Mot de passe *</label>
                 <input type="password" id="password" name="password" placeholder="Votre mot de passe" aria-required="true">
               
-               <input type="submit" value="Connexion à votre compte">
+               <input type="submit" value="Connexion à votre compte" name="submit">
               </form>
 
             </fieldset> 

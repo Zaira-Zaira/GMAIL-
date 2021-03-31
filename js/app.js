@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
     let element = document.createElement('p')
     parent.prepend(element)
 
-    // let checkmail =/^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/
-    // let checkPassword =  /^[a-zA-Z!"#\$%&'\(\)\*\+,-\.\/:;<=>\?@[\]\^_`\{\|}~]{6,30}$/
+    let checkmail =/^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/
+    let checkPassword =  /^[a-zA-Z!"#\$%&'\(\)\*\+,-\.\/:;<=>\?@[\]\^_`\{\|}~]{6,30}$/
 
     let User = {
       firstname: document.getElementsByTagName("input")[0],
@@ -42,23 +42,25 @@ document.addEventListener('DOMContentLoaded', ()=>{
               element.classList.add("warning")
               return false;
             }
-            // else if(checkmail.exec(this.email.value && checkPassword.exec(this.password.value))){
-            //   element.innerText += "Veuillez saisir les champs correctement!"
-            //   return false;
-            // }
+            else if(checkmail.exec(this.email.value && checkPassword.exec(this.password.value))){
+              element.innerText += "Veuillez saisir les champs correctement!"
+              return false;
+            }
           }
     }
 
 
     submitBtn.addEventListener("click", (e)=> {
-      if(User.userDataControll()){
-        console.log("ok")
+      e.preventDefault();
+      if(User.userDataControll()) {
+        document.location.assign("connexion.html")
+        console.log("ok");
+        
       }
       else{
         e.preventDefault();
       }
-  
-  
+    
     })
 
 

@@ -21,28 +21,39 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 
 
-   let login = document.querySelector('#login');
-   let password = document.querySelector('#password');
+    let email = sessionStorage.getItem('email');
+    let  passwordUser = sessionStorage.getItem('password');
 
-   let email = sessionStorage.getItem('email');
-   let passwordUser = sessionStorage.getItem('password');
 
-   
-    submit.addEventListener('click', ()=>{
-        if(login.value == email && password.value == passwordUser){
-            element.innerText += "Vous êtes bien connecté";
+
+   let logIn = {
+    login: document.querySelector('#login'),
+    password: document.querySelector('#password'),
+
+    
+        userDataControll(){
+          if(this.login.value == email && this.password.value == passwordUser)
+          {
+            element.innerText += "Vous êtes connecté"
             element.classList.add("success")
+            return true;
+          }
+          else if(login.value == "" || passwordUser == ""){
+            element.innerText += "Tous les champs sont obligatoires!!!"
+            element.classList.add("warning")
+            return false;
+          }
+          else if(this.password != passwordUser) {
+            element.innerText += "Mot de passe incorrect"
+            element.classList.add("warning")
+          }
         }
-        else if(login != email){
-           element.innerText += "Votre login est incorrect";
-           element.classList.add("warning")
-        }
-        else if(password != passwordUser){
-           element.innerText += "Votre mot de passe est incorrect";
-           element.classList.add("warning")
-        }
+  }
 
-   })
+  submit.addEventListener('click', (e)=> {
+    e.preventDefault()
+    logIn.userDataControll()
+  })
 
 
 
