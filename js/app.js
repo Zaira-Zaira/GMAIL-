@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', (e)=>{
 
 
     submitBtn.addEventListener("click", (e)=> {
-      e.preventDefault();
       if(User.userDataControll()) {
         document.location.assign("connexion.html")
       }
