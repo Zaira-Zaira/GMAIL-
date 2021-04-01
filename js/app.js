@@ -52,13 +52,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     submitBtn.addEventListener("click", (e)=> {
       e.preventDefault();
-      if(User.userDataControll()) {
+
+      if(User.userDataControll()){
         document.location.assign("connexion.html")
-        console.log("ok");
-        
-      }
-      else{
-        e.preventDefault();
+      }else{
+        false;
       }
     
     })
