@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', ()=>{
+document.addEventListener('DOMContentLoaded', (e)=>{
+  e.preventDefault();
     const linkList = document.querySelectorAll("header nav ul:nth-child(2) li a");
     const submitBtn = document.getElementsByTagName("input")[4]
 
@@ -54,8 +55,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
       e.preventDefault();
       if(User.userDataControll()) {
         document.location.assign("connexion.html")
-        console.log("ok");
-        
       }
       else{
         e.preventDefault();
